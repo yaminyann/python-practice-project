@@ -1,0 +1,18 @@
+# print unique value in a dictonary
+
+a = { 1:1 ,2:2 ,3:1,4:30  }
+b = {}
+count = {}
+
+for i in a.values():
+    count.setdefault(i,0)
+    count[i] = count[i]+1
+
+i = 0
+for k,v in count.items():
+    if v == 1:
+        b.update({i:k})
+        i  = i + 1
+
+for b in b.values():
+    print(i,end=' ')
